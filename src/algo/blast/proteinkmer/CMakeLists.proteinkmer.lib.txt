@@ -1,0 +1,11 @@
+# $Id: CMakeLists.proteinkmer.lib.txt 621932 2020-12-17 17:40:31Z ivanov $
+
+NCBI_begin_lib(proteinkmer)
+  NCBI_sources(
+    blastkmer blastkmerindex blastkmeroptions blastkmerresults 
+    blastkmerutils mhfile pearson kblastapi
+  )
+  NCBI_uses_toolkit_libraries(xblast)
+  NCBI_project_watchers(boratyng madden)
+NCBI_end_lib()
+

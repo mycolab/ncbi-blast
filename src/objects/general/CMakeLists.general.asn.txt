@@ -1,0 +1,9 @@
+# $Id: CMakeLists.general.asn.txt 621928 2020-12-17 17:39:42Z ivanov $
+
+NCBI_begin_lib(general)
+  NCBI_sources(uoconv)
+  NCBI_dataspecs(general.asn)
+  NCBI_uses_toolkit_libraries(xser)
+  NCBI_project_watchers(bollin)
+NCBI_end_lib()
+

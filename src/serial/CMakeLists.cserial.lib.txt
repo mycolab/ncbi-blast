@@ -1,0 +1,10 @@
+# $Id: CMakeLists.cserial.lib.txt 621922 2020-12-17 17:38:33Z ivanov $
+
+NCBI_begin_lib(xcser)
+  NCBI_sources(asntypes serialasn)
+  NCBI_optional_components(NCBI_C)
+  NCBI_uses_toolkit_libraries(xser)
+  NCBI_project_watchers(vasilche)
+NCBI_end_lib()
+
+

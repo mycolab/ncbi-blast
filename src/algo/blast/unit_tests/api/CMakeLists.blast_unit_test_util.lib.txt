@@ -1,0 +1,12 @@
+# $Id: CMakeLists.blast_unit_test_util.lib.txt 621932 2020-12-17 17:40:31Z ivanov $
+
+NCBI_begin_lib(blast_unit_test_util)
+  NCBI_sources(test_objmgr blast_test_util)
+  NCBI_uses_toolkit_libraries(
+    blastdb xnetblast
+    blast ncbi_xloader_genbank test_boost
+    xobjutil
+  )
+  NCBI_project_watchers(camacho madden fongah2)
+NCBI_end_lib()
+

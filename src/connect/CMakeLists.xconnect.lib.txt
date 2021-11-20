@@ -1,0 +1,11 @@
+# $Id: CMakeLists.xconnect.lib.txt 621583 2020-12-14 19:14:21Z ivanov $
+
+NCBI_begin_lib(xconnect)
+  NCBI_sources(${SRC_C} ${SRC_CXX})
+  NCBI_headers(*.hpp)
+  NCBI_requires(TLS)
+  NCBI_uses_toolkit_libraries(xncbi)
+  NCBI_project_tags(core)
+  NCBI_project_watchers(lavr)
+NCBI_end_lib()
+

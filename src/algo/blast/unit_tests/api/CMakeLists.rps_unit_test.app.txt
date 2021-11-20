@@ -1,0 +1,10 @@
+# $Id: CMakeLists.rps_unit_test.app.txt 621932 2020-12-17 17:40:31Z ivanov $
+
+NCBI_begin_app(rps_unit_test)
+  NCBI_sources(rps_unit_test)
+  NCBI_uses_toolkit_libraries(blast_unit_test_util xblast)
+  NCBI_set_test_assets(rps_unit_test.ini data)
+  NCBI_add_test()
+  NCBI_project_watchers(madden fongah2)
+NCBI_end_app()
+

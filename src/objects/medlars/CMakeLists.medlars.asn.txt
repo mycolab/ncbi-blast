@@ -1,0 +1,7 @@
+# $Id: CMakeLists.medlars.asn.txt 621928 2020-12-17 17:39:42Z ivanov $
+
+NCBI_begin_lib(medlars)
+  NCBI_dataspecs(medlars.asn)
+  NCBI_uses_toolkit_libraries(biblio)
+NCBI_end_lib()
+

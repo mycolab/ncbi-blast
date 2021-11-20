@@ -1,0 +1,8 @@
+# $Id: CMakeLists.esummary.asn.txt 621931 2020-12-17 17:40:15Z ivanov $
+
+NCBI_begin_lib(esummary)
+  NCBI_dataspecs(esummary.dtd)
+  NCBI_uses_toolkit_libraries(xser)
+  NCBI_project_watchers(grichenk)
+NCBI_end_lib()
+

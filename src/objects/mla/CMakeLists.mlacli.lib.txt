@@ -1,0 +1,7 @@
+# $Id: CMakeLists.mlacli.lib.txt 621928 2020-12-17 17:39:42Z ivanov $
+
+NCBI_begin_lib(mlacli)
+  NCBI_generated_sources(mla_client.cpp mla_client_.cpp)
+  NCBI_uses_toolkit_libraries(mla xconnect)
+NCBI_end_lib()
+

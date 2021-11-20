@@ -1,0 +1,8 @@
+# $Id: CMakeLists.esearch.asn.txt 621931 2020-12-17 17:40:15Z ivanov $
+
+NCBI_begin_lib(esearch)
+  NCBI_dataspecs(esearch.dtd)
+  NCBI_uses_toolkit_libraries(xser)
+  NCBI_project_watchers(grichenk)
+NCBI_end_lib()
+

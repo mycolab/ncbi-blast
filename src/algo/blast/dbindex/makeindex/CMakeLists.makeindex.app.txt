@@ -1,0 +1,8 @@
+# $Id: CMakeLists.makeindex.app.txt 621932 2020-12-17 17:40:31Z ivanov $
+
+NCBI_begin_app(makembindex)
+  NCBI_sources(main mkindex_app)
+  NCBI_uses_toolkit_libraries(xalgoblastdbindex)
+  NCBI_project_watchers(morgulis)
+NCBI_end_app()
+

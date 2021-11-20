@@ -1,0 +1,13 @@
+# $Id: CMakeLists.test_jsonwrapp_old.app.txt 621674 2020-12-15 14:42:44Z ivanov $
+
+add_executable(test_jsonwrapp_old-app
+    test_jsonwrapp_old
+)
+
+set_target_properties(test_jsonwrapp_old-app PROPERTIES OUTPUT_NAME test_jsonwrapp_old)
+
+
+target_link_libraries(test_jsonwrapp_old-app
+    test_boost xncbi 
+)
+
