@@ -38,7 +38,7 @@ RUN makeblastdb -in /blast/fasta/nurse-shark-proteins.fsa -dbtype prot \
     -parse_seqids -out nurse-shark-proteins -title "Nurse shark proteins" \
     -taxid 7801 -blastdb_version 5
 
-WORKDIR /blast
-RUN blastdbcmd -entry all -db nurse-shark-proteins -outfmt "%a %l %T"
+# WORKDIR /blast
+# RUN blastdbcmd -entry all -db nurse-shark-proteins -outfmt "%a %l %T"
 
 CMD ["sleep", "86400"]
