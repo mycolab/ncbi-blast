@@ -8,8 +8,8 @@ services:
     environment:
       - ADMIN_USER=admin
       - ADMIN_PASSWORD=admin
-    ports:
-      - "8086:8086"
+#    ports:
+#      - "8086:8086"
     volumes:
       - $HOME/data/${PROJECT}/ncbi-blast/blastdb:/blast/blastdb:rw
       - $HOME/data/${PROJECT}/ncbi-blast/blastdb_custom:/blast/blastdb_custom:rw
