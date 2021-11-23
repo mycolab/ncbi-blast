@@ -9,5 +9,5 @@ cd $WORKDIR || exit 1
 for DATASET in ${DATASETS}
 do
     echo "updating database: ${DATASET}"
-    update_blastdb.pl "${DATASET}" --decompress
+    update_blastdb.pl "${DATASET}" --decompress --passive
 done

@@ -22,6 +22,9 @@ RUN gunzip -c edirect.tar.gz | tar xf - && rm edirect.tar.gz && cp -r edirect/* 
 # import sequences and create a BLAST database
 RUN mkdir blastdb queries fasta results
 
-RUN ./update-data.sh
+# move startup and update scripts to PATH
+RUN mv update-data.sh /usr/local/bin
+RUN mv start-blast.sh /usr/local/bin
 
-CMD ["sleep", "86400"]
+ENTRYPOINT ["/usr/local/bin/start-blast.sh"]
+CMD ["--update", "--start-api"]
