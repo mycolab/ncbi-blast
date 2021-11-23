@@ -23,6 +23,7 @@ RUN gunzip -c edirect.tar.gz | tar xf - && rm edirect.tar.gz && cp -r edirect/* 
 RUN mkdir blastdb queries fasta results
 
 # move startup and update scripts to PATH
+RUN chmod 755 *.sh
 RUN mv update-data.sh /usr/local/bin
 RUN mv start-blast.sh /usr/local/bin
 

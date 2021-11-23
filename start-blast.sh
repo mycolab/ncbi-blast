@@ -7,6 +7,7 @@ function usage(){
   echo "  -h | --help        Show this help message"
   echo "  -u | --update      Update blast databases"
   echo "  -s | --start-api   Start the blast REST API"
+  echo
 }
 
 OPTS=$(getopt \
@@ -26,7 +27,7 @@ UPDATE=false
 START_API=false
 while true; do
   case "$1" in
-    -h|--help)        export HELP=true; shift 1;;
+    -h|--help)        export HELP=true; usage; shift 1;;
     -u|--update)      export UPDATE=true; shift 1;;
     -s|--start-api)   export START_API=true; shift 1;;
     -U|--user)        export arg_sub_pw=$2; shift 2;;
@@ -37,12 +38,12 @@ while true; do
 done
 
 # run update in background
-if [[ $UPDATE ]];then
+if [[ $UPDATE == true ]];then
   update-data.sh &
 fi
 
 # start the REST API
-if [[ $START_API ]];then
+if [[ $START_API == true ]];then
   sleep 86400
   # start-blast-api.sh   # TODO: locate CGI
 fi
