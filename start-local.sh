@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-export PROJECT=mycolab
+[[ -z $PROJECT ]] && PROJECT=mycolab
+export PROJECT
 ./docker-net.sh
 
 mkdir -p $HOME/data/${PROJECT}/ncbi-blast/blastdb

@@ -47,4 +47,3 @@ if [[ $START_API == true ]];then
   sleep 86400
   # start-blast-api.sh   # TODO: locate CGI
 fi
-
