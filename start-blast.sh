@@ -30,8 +30,8 @@ while true; do
     -h|--help)        export HELP=true; usage; shift 1;;
     -u|--update)      export UPDATE=true; shift 1;;
     -s|--start-api)   export START_API=true; shift 1;;
-    -U|--user)        export arg_sub_pw=$2; shift 2;;
-    -P|--pass)        export arg_sub_pw=$2; shift 2;;
+    -U|--user)        export username=$2; shift 2;;
+    -P|--pass)        export password=$2; shift 2;;
     --) shift 1; break;;
     *) usage; break;;
   esac
