@@ -1,3 +1,7 @@
+blastdb/
+queries/
+fasta/
+results/
 # Prerequisites
 *.d
 
