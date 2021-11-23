@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
-export PROJECT=mycolab
+
+[[ -z $PROJECT ]] && PROJECT=mycolab
+export PROJECT
 
 docker compose -p $PROJECT down

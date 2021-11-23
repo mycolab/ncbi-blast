@@ -6,8 +6,11 @@ RUN apt-get update \
  && apt-get install -y build-essential git libtool-bin autopoint autotools-dev autoconf pkg-config \
     libncurses5-dev libncursesw5-dev gettext software-properties-common curl cpio
 
+# add files
+ADD blast/ /blast
+ADD *.sh /blast
+
 # compile and install blast
-ADD . /blast
 WORKDIR /blast
 RUN ./configure
 WORKDIR /blast/ReleaseMT/build
