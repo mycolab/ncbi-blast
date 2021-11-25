@@ -28,4 +28,4 @@ else
 fi
 
 ./docker-net.sh || exit 1
-docker compose -p $PROJECT up -d
+docker-compose -p $PROJECT up -d
