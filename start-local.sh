@@ -4,7 +4,7 @@
 export PROJECT
 
 BASE_PATH=$1
-[[ -z $BASE_PATH ]] && BASE_PATH="${HOME}/data/${PROJECT}/ncbi-blast"
+[[ -z $BASE_PATH ]] && BASE_PATH="${HOME}/data/${PROJECT}/ncbi-blast" && mkdir -p "$BASE_PATH"
 
 if [[ ! -d $BASE_PATH ]];then
    echo "${BASE_PATH} is not a valid directory."
