@@ -9,7 +9,7 @@ RUN apt-get update \
 # add files
 ADD /blast /blast
 COPY update-data.sh /usr/local/bin
-COPY start-local.sh /usr/local/bin
+COPY start-blast.sh /usr/local/bin
 
 # compile and install blast
 WORKDIR /blast
