@@ -22,7 +22,6 @@ RUN perl -MNet::FTP -e '$ftp = new Net::FTP("ftp.ncbi.nlm.nih.gov", Passive => 1
 RUN gunzip -c edirect.tar.gz | tar xf - && rm edirect.tar.gz && cp -r edirect/* /usr/local/bin
 
 # import sequences and create a BLAST database
-WORKDIR /blast
 RUN mkdir blastdb queries fasta results
 
 ENTRYPOINT ["/usr/local/bin/start-blast.sh"]
