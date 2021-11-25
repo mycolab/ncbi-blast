@@ -1,0 +1,9 @@
+# $Id: Makefile.utrtprof.lib 622628 2020-12-29 15:14:57Z merezhuk $
+
+
+SRC =  rtprofile
+
+
+LIB = utrtprof
+
+WATCHERS = merezhuk

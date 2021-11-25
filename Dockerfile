@@ -7,15 +7,14 @@ RUN apt-get update \
     libncurses5-dev libncursesw5-dev gettext software-properties-common curl cpio
 
 # add files
-ADD blast/ /blast
-ADD *.sh /blast
+ADD /blast /blast
+COPY update-data.sh /usr/local/bin
+COPY start-local.sh /usr/local/bin
 
 # compile and install blast
 WORKDIR /blast
 RUN ./configure
-WORKDIR /blast/ReleaseMT/build
-RUN make all_r
-WORKDIR /blast
+RUN make
 RUN make install
 
 # install edirect tools
@@ -23,11 +22,8 @@ RUN perl -MNet::FTP -e '$ftp = new Net::FTP("ftp.ncbi.nlm.nih.gov", Passive => 1
 RUN gunzip -c edirect.tar.gz | tar xf - && rm edirect.tar.gz && cp -r edirect/* /usr/local/bin
 
 # import sequences and create a BLAST database
+WORKDIR /blast
 RUN mkdir blastdb queries fasta results
-
-# move startup and update scripts to PATH
-RUN chmod 755 *.sh
-RUN mv *.sh /usr/local/bin
 
 ENTRYPOINT ["/usr/local/bin/start-blast.sh"]
 CMD ["--update", "--start-api"]
