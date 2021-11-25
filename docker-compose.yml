@@ -13,6 +13,8 @@ services:
     volumes:
       - $HOME/data/${PROJECT}/ncbi-blast/blastdb:/blast/blastdb:rw
       - $HOME/data/${PROJECT}/ncbi-blast/fasta:/blast/fasta:rw
+
 networks:
   default:
-    name: ${PROJECT}
+    external:
+      name: ${PROJECT}
