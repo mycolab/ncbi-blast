@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND="noninteractive"
 RUN apt clean
 RUN apt-get update \
  && apt-get install -y build-essential git libtool-bin autopoint autotools-dev autoconf pkg-config \
-    libncurses5-dev libncursesw5-dev gettext software-properties-common curl cpio
+    libncurses5-dev libncursesw5-dev gettext software-properties-common curl cpio python3 python3-pip vim
 
 # add files
 ADD /blast /blast
@@ -35,4 +35,4 @@ ENTRYPOINT ["/usr/local/bin/start-blast.sh"]
 CMD ["--api"]
 
 # # optionally: install and update nucleotide database
-# CMD ["--update", "--start-api"]
+# CMD ["--update", "--api"]
