@@ -4,9 +4,9 @@ function usage(){
     echo "start-blast.sh [opts]"
     echo
     echo "options:"
-    echo "  -h | --help        Show this help message"
-    echo "  -u | --update      Update blast databases"
-    echo "  -s | --start-api   Start the blast REST API"
+    echo "  -h | --help     Show this help message"
+    echo "  -u | --update   Update blast databases"
+    echo "  -a | --api      Start the blast REST API"
     echo
 }
 
@@ -24,12 +24,12 @@ fi
 eval set -- "${OPTS}"
 HELP=false
 UPDATE=false
-START_API=false
+API=false
 while true; do
     case "$1" in
         -h|--help)        export HELP=true; usage; shift 1;;
         -u|--update)      export UPDATE=true; shift 1;;
-        -s|--start-api)   export START_API=true; shift 1;;
+        -a|--api)         export API=true; shift 1;;
         -U|--user)        export username=$2; shift 2;;
         -P|--pass)        export password=$2; shift 2;;
         --) shift 1; break;;
@@ -43,7 +43,7 @@ if [[ $UPDATE == true ]];then
 fi
 
 # start the REST API
-if [[ $START_API == true ]];then
+if [[ $API == true ]];then
     sleep 86400
     # start-blast-api.sh   # TODO: locate and build CGI, or create custom API from CLI tools :(
 fi
