@@ -1,7 +1,5 @@
 import connexion
-# from connexion.resolver import RestyResolver
-from connexion.resolver import MethodViewResolver
 
-app = connexion.FlaskApp(__name__)
-app.add_api('spec/specimen.yaml', resolver=MethodViewResolver('api'))
+app = connexion.FlaskApp(__name__, specification_dir='openapi/')
+app.add_api('specimen.yaml')
 app.run(port=8080)

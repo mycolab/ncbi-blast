@@ -1,2 +1,1 @@
-from .specimen import SpecimenView
 
