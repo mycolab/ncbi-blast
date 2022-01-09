@@ -17,5 +17,5 @@ services:
 
 networks:
   default:
-    external:
-      name: ${PROJECT}
+    name: ${PROJECT}
+    external: true

@@ -12,7 +12,7 @@ function usage(){
 
 OPTS=$(getopt \
     -o husU:P: \
-    -l update,start-api,user:,pass: \
+    -l update,api,user:,pass: \
     -n 'start-blast.sh' -- "$@")
 
 # shellcheck disable=SC2181
