@@ -26,7 +26,7 @@ RUN  chmod +x transmute.Linux
 RUN  mv transmute.Linux /usr/local/bin
 
 # import sequences and create a BLAST database
-RUN mkdir blastdb queries fasta results
+RUN mkdir mycolabdb blastdb queries fasta results
 COPY update-data.sh /usr/local/bin
 COPY start-blast.sh /usr/local/bin
 

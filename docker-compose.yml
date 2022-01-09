@@ -12,6 +12,7 @@ services:
 #      - "8086:8086"
     volumes:
       - $HOME/data/${PROJECT}/ncbi-blast/blastdb:/blast/blastdb:rw
+      - $HOME/data/${PROJECT}/ncbi-blast/mycolab:/blast/mycolab:rw
       - $HOME/data/${PROJECT}/ncbi-blast/fasta:/blast/fasta:rw
 
 networks:
