@@ -11,6 +11,16 @@ if [[ ! -d $BASE_PATH ]];then
    exit 1
 fi
 
+
+
+mycolabdb_path="${BASE_PATH}/mycolabdb"
+if [[ ! -d "${mycolabdb_path}" ]];then
+    echo "creating mycolabdb directory: $mycolabdb_path"
+    mkdir -p "${mycolabdb_path}"
+else
+    echo "mycolabdb directory: $mycolabdb_path"
+fi
+
 blastdb_path="${BASE_PATH}/blastdb"
 if [[ ! -d "${blastdb_path}" ]];then
     echo "creating blastdb directory: $blastdb_path"
