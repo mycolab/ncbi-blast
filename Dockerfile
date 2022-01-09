@@ -34,6 +34,3 @@ COPY start-blast.sh /usr/local/bin
 # start container
 ENTRYPOINT ["/usr/local/bin/start-blast.sh"]
 CMD ["--api"]
-
-# # optionally: install and update nucleotide database
-# CMD ["--update", "--api"]

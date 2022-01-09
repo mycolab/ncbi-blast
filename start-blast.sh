@@ -44,6 +44,9 @@ fi
 
 # start the REST API
 if [[ $API == true ]];then
-    sleep 86400
-    # start-blast-api.sh   # TODO: locate and build CGI, or create custom API from CLI tools :(
+    # TODO: locate and build CGI, or create custom API from CLI tools :(
+    while true
+    do
+        sleep 1
+    done
 fi
